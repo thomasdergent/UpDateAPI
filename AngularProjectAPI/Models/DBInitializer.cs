@@ -28,6 +28,33 @@ namespace AngularProjectAPI.Models
                 return;
             }
 
+
+
+            List<User> users = new List<User>
+            {
+new User {RoleID = 3, UserName = "admin", Password = "admin", FirstName = "Thomas", LastName = "admin", Email = "admin@thomasmore.be" },
+new User {RoleID = 2, UserName = "journalist", Password = "journalist", FirstName = "Thomas", LastName = "Dergent", Email = "thomasdergent@thomasmore.be" },
+new User {RoleID = 2, UserName = "mathiasguns", Password = "journalist", FirstName = "Mathias", LastName = "Guns", Email = "mathiasguns@journalist.update.be" },
+new User {RoleID = 2, UserName = "mikecoertjens", Password = "journalist", FirstName = "Mike", LastName = "Coertjens", Email = "mikecoertjens@thomasmore.be" },
+new User {RoleID = 2, UserName = "lindeschots", Password = "journalist", FirstName = "Linde", LastName = "Schots", Email = "lindeschots@@journalist.update.be " },
+new User {RoleID = 2, UserName = "thomasgladine", Password = "journalist", FirstName = "Thomas", LastName = "Gladiné", Email = "thomasgladine@journalist.update.be" },
+new User {RoleID = 2, UserName = "mathijsadinau", Password = "journalist", FirstName = "Mathijs", LastName = "Adinau", Email = "mathijsadinau@journalist.update.be" },
+new User {RoleID = 2, UserName = "charlottevanaerschot", Password = "journalist", FirstName = "Charlotte", LastName = "Van Aerschot", Email = "charlottevanaerschot@journalist.update.be" },
+new User {RoleID = 2, UserName = "noahfrantzen", Password = "journalist", FirstName = "Noah", LastName = "Frantzen", Email = "noahfrantzen@journalist.update.be" },
+new User {RoleID = 2, UserName = "thibogladine", Password = "journalist", FirstName = "Thibo", LastName = "Gladiné", Email = "thibogladine@journalist.update.be" },
+new User {RoleID = 2, UserName = "elineclaes", Password = "journalist", FirstName = "Eline", LastName = "Claes", Email = "elineclaes@journalist.update.be" }
+
+
+            };
+
+      
+            if (!context.Users.Any())
+            {
+                context.Users.AddRange(
+                    users
+                );
+            }
+
             context.Roles.AddRange(
               new Role { Name = "User" },
               new Role { Name = "Journalist" },
