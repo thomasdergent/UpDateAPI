@@ -192,7 +192,7 @@ namespace AngularProjectAPI.Controllers
         public async Task<ActionResult<IEnumerable<Article>>> GetArticlesByUserID(int id)
         {
 
-            var articlesUser = await _context.Articles.Include(t => t.Tag).Include(u => u.User).Include(a => a.ArticleStatus).ToListAsync();
+            var articlesUser = await _context.Articles.Include(t => t.Tag).Include(u => u.User).Include(a => a.ArticleStatus).Where(u=>u.User.UserID==id).ToListAsync();
 
             if (articlesUser == null)
             {

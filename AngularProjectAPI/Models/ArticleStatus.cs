@@ -17,3 +17,5 @@ namespace AngularProjectAPI.Models
         public ICollection<Article> Articles { get; set; }
     }
 }
+
+

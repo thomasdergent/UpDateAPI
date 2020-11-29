@@ -18,3 +18,4 @@ namespace AngularProjectAPI.Models
         public Article Article { get; set; }
     }
 }
+

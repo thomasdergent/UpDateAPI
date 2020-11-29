@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AngularProjectAPI.Data;
 using AngularProjectAPI.Models;
-using AngularProjectAPI.Models.ReactionModels;
 using Reaction = AngularProjectAPI.Models.Reaction;
 using AngularProjectAPI.Models.ReactionModel;
 
